@@ -18,8 +18,9 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "https://pwa-test-app-20211215.herokuapp.com/",
+  "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
+  "scope": "https://www.integerbyteblog/",
   "background_color": "#ffffff"
 }
