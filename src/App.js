@@ -24,7 +24,7 @@ function App() {
 
   useEffect(() => {
     fetch(SERVER_API + "/status")
-      .then((resp) => console.log(resp.json()))
+      .then((resp) => resp.json())
       .then((data) => console.log(data));
   });
   const onUpdateSecurity = (value, type) => {
