@@ -23,7 +23,9 @@ function App() {
   const [comfort, setComfort] = React.useState("off");
 
   useEffect(() => {
-    fetch(SERVER_API + "/status").then((resp) => console.log(resp));
+    fetch(SERVER_API + "/status")
+      .then((resp) => console.log(resp.json()))
+      .then((data) => console.log(data));
   });
   const onUpdateSecurity = (value, type) => {
     setSecurity({ ...security, [type]: value });
