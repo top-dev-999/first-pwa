@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 
+import axios from "axios";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
@@ -23,7 +24,8 @@ function App() {
   const [comfort, setComfort] = React.useState("off");
 
   useEffect(() => {
-    fetch(SERVER_API + "/status")
+    axios
+      .get(SERVER_API + "/status")
       .then((resp) => resp.json())
       .then((data) => console.log(data));
   });
